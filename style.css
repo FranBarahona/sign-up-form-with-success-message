@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'Roboto-Regular'; /* Nombre que le das a tu fuente */
+    src: url('assets/fonts/Roboto-Regular.ttf') format('woff'); /* Ruta a tu archivo de fuente y su formato */
+  }
+  @font-face {
+    font-family: 'Roboto-Bold'; /* Nombre que le das a tu fuente */
+    src: url('assets/fonts/Roboto-Bold.ttf') format('woff'); /* Ruta a tu archivo de fuente y su formato */
+  }
+
+
+body{
+    background-color: #35394D;
+    font-family: 'Roboto-Regular',sans-serif;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 800px;
+    height: 600px;
+    border-radius: 25px;
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+    background-color: #FFFFFF;
+    padding: 1rem;
+    display: flex;
+}
+.card-section-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: #232742;
+    margin: 3rem;
+}
+.card-section-1 h1{
+    font-family: 'Roboto-Bold';
+    font-size: 50px;    
+}
+.card-section-1-text-p{
+    font-weight: 100;   
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: smaller;
+}
+
+.card-section-1-text-p img{
+    margin-right: 1rem;
+}
+
+.card-section-1 form{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 200px;
+}
+
+.card-section-1 form label{
+    font-family: 'Roboto-Bold';
+ }
+
+ .card-section-1 form button{
+    font-family: 'Roboto-Bold';
+    background-color: #232742;
+    color: #FFFFFF;
+    height: 50px;
+    border-radius: 5px;
+ }
+
+ .card-section-1 form button:hover{
+    border:none;
+    font-family: 'Roboto-Bold';
+    background-image: linear-gradient(to right, #FF517C 0%, #FF634D 100%);
+ }
+
+ .card-section-1 form input[type="text"]{
+    height: 50px;
+    border-radius: 5px;
+    border:none;
+    border: 1px solid gray;
+    padding: 1rem;
+    font-family: 'Roboto-Bold';
+    opacity: 0.5;
+ }
+ .card-section-1 form input[type="text"]:hover{
+    border: 2px solid #2A2834;
+ }
+ .card-section-1 form label{
+    font-size: smaller;
+ }
+
+.card-section-2 {
+    height: 100%;
+    width: 60%;
+    background-size: cover;
+    background-image: url('assets/images/illustration-sign-up-desktop.svg');
+    border-radius: 5%;
+}
+
+@media only screen and (max-width: 480px) {
+    /* Estilos para dispositivos móviles */
+    .card{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0;
+        padding: 0;
+    }
+    .card-section-1{
+        order:2;
+        padding: 1.5rem;
+        margin: 0;
+    }
+    .card-section-1-text-p{
+        font-weight: 100;   
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: large;
+    }
+    .card-section-2{
+        background-image: url('assets/images/illustration-sign-up-mobile.svg');
+        height: 100%;
+        width: 100%;
+
+    }
+  }
+
+
